@@ -1,12 +1,13 @@
-let numero = "dos"
+let num= Number(prompt("Ingrese un numero"))
 
-switch (numero % 2) {
-    case 0:
-        console.log("El numero que ingreso es un numero par")
-        break
-    case 1:
-        console.log("El numero que ingreso es un numero impar")
-        break
-    default:
-        console.log("El dato ingresado no es un numero")
-}
+let esPrimo = (num) => {
+    if (num < 2) return false
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+};
+
+alert(num + (esPrimo(num) ? " es primo" : " no es primo"))
+
